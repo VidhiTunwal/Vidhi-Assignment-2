@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Metric Conversion</title>
+</head>
+<body>
+    <h2>Metric Conversion</h2>
+    <label>Enter value:</label>
+    <input type="number" id="value">
+    <br>
+    <label>From unit:</label>
+    <select id="fromUnit">
+        <option value="meter">Meter</option>
+        <option value="yard">Yard</option>
+        <option value="feet">Feet</option>
+    </select>
+    <br>
+    <label>To unit:</label>
+    <select id="toUnit">
+        <option value="meter">Meter</option>
+        <option value="yard">Yard</option>
+        <option value="feet">Feet</option>
+    </select>
+    <br>
+    <button onclick="convert()">Convert</button>
+    <p id="result"></p>
+
+    <script>
+        function convert() {
+            const value = document.getElementById('value').value;
+            const fromUnit = document.getElementById('fromUnit').value;
+            const toUnit = document.getElementById('toUnit').value;
+            let result;
+            if (fromUnit === 'meter' && toUnit === 'yard') {
+                result = value * 1.09;
+            } else if (fromUnit === 'meter' && toUnit === 'feet') {
+                result = value * 3.3;
+            } else if (fromUnit === 'yard' && toUnit === 'meter') {
+                result = value / 1.09;
+            } else if (fromUnit === 'yard' && toUnit === 'feet') {
+                result = value * 3;
+            } else if (fromUnit === 'feet' && toUnit === 'meter') {
+                result = value / 3.3;
+            } else if (fromUnit === 'feet' && toUnit === 'yard') {
+                result = value / 3;
+            } else {
+                result = value; // Same unit conversion
+            }
+            document.getElementById('result').textContent = `Result: ${result} ${toUnit}`;
+        }
+    </script>
+</body>
+</html>

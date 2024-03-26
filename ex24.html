@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+            display: inline-block;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="events"></div>
+
+    <script>
+        var events = [
+            {
+                title: "Event 1",
+                date: "January 1, 2022",
+                description: "Description for Event 1",
+                image: "https://via.placeholder.com/300"
+            },
+            {
+                title: "Event 2",
+                date: "February 1, 2022",
+                description: "Description for Event 2",
+                image: "https://via.placeholder.com/300"
+            }
+        ];
+
+        var eventsContainer = document.getElementById("events");
+        events.forEach(function(event) {
+            var card = document.createElement("div");
+            card.classList.add("card");
+            var html = `
+                <img src="${event.image}" alt="${event.title}">
+                <h2>${event.title}</h2>
+                <p>Date: ${event.date}</p>
+                <p>${event.description}</p>
+            `;
+            card.innerHTML = html;
+            eventsContainer.appendChild(card);
+        });
+    </script>
+</body>
+</html>

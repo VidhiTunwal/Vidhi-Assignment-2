@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Grid Layout</title>
+    <style>
+        /* Define styles for table and grid squares */
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            padding: 0;
+        }
+
+        .black {
+            background-color: black;
+        }
+
+        .red {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>2D Grid Layout</h1>
+
+    <!-- Container for the grid -->
+    <table id="grid-container">
+        <script>
+            // Get number of rows and columns from user
+            var rows = parseInt(prompt("Enter number of rows"));
+            var cols = parseInt(prompt("Enter number of columns"));
+
+            // Loop through rows
+            for (var i = 0; i < rows; i++) {
+                // Create a new row element
+                document.write("<tr>");
+
+                // Loop through columns
+                for (var j = 0; j < cols; j++) {
+                    // Calculate the position of the cell in the grid
+                    var position = i * cols + j;
+
+                    // Determine the color of the cell based on its position
+                    var colorClass = (position % 2 === 0) ? "black" : "red";
+
+                    // Create a new table cell element with the appropriate color class
+                    document.write('<td class="' + colorClass + '"></td>');
+                }
+
+                // Close the row tag
+                document.write("</tr>");
+            }
+        </script>
+    </table>
+</body>
+</html>

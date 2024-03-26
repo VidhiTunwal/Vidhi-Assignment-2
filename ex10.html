@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    <title>Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .quiz-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .quiz-question {
+            margin-bottom: 10px;
+        }
+        .quiz-options {
+            margin-bottom: 20px;
+        }
+        .quiz-submit-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Quiz</h1>
+        <form id="quizForm">
+            <div class="quiz-question">
+<ol type="1">
+                <li>What is the capital of France?
+            <ul type="a">
+                <li><input type="radio" name="question1" value="Paris">A. Paris</li>
+                <li><input type="radio" name="question2" value="l">B. London</li>
+                <li><input type="radio" name="question3" value="r">C. Rome</li>
+                <li><input type="radio" name="question4" value="b">D. Berlin</li>
+            </ul>
+        </li>
+        <li>What is H<sub>2</sub>O?
+            <ul type="a">
+                <li><input type="radio" name="question1" value="Paris">A. Hydrogen Peroxide</li>
+                <li><input type="radio" name="question1" value="Paris">B. Water</li>
+                <li><input type="radio" name="question1" value="Paris">C. Sodium Chloride</li>
+                <li><input type="radio" name="question1" value="Paris">D. Ammonia</li>
+            </ul>
+        </li>
+        <li>Which programming language is often used for web development?
+            <ul >
+                <li><input type="radio" name="question1" value="Paris">A. Java</li>
+                <li><input type="radio" name="question1" value="Paris">B.JavaScript</li>
+                <li><input type="radio" name="question1" value="Paris">C. C++</li>
+                <li><input type="radio" name="question1" value="Paris">D. Python</li>
+            </ul>
+        </li>
+        <li>What is the formula to calculate area of a rectangle?
+            <ul type="a">
+                <li><input type="radio" name="question1" value="Paris">A. L * W</li>
+                <li><input type="radio" name="question1" value="Paris">B. L + W</li>
+                <li><input type="radio" name="question1" value="Paris">C. 2 * (L + W)</li>
+                <li><input type="radio" name="question1" value="Paris">D. L * W * H</li>
+            </ul>
+        </li>
+        <li>What is the most abundant gas in Earth's atmosphere?
+            <ul type="a">
+                <li><input type="radio" name="question1" value="Paris">A. Nitrogen</li>
+                <li><input type="radio" name="question1" value="Paris">B. Oxygen</li>
+                <li><input type="radio" name="question1" value="Paris">C. Carbon Dioxide</li>
+                <li><input type="radio" name="question1" value="Paris">D.Argon</li>
+            </ul>
+        </li>
+</ol>
+            <button type="submit" class="quiz-submit-btn">Submit Quiz</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('quizForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get selected answers
+            const answer1 = document.querySelector('input[name="question1"]:checked');
+            const answer2 = document.querySelector('input[name="question2"]:checked');
+
+            // Check if both questions are answered
+            if (answer1 && answer2) {
+                alert('Quiz submitted successfully!');
+            } else {
+                alert('Please answer all questions before submitting.');
+            }
+        });
+    </script>
+</body>
+</html>

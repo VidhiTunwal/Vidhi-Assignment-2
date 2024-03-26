@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+</head>
+<body>
+    <label for="temperature">Temperature:</label>
+    <input type="number" id="temperature" name="temperature">
+    <select id="unit">
+        <option value="celsius">Celsius</option>
+        <option value="fahrenheit">Fahrenheit</option>
+        <option value="kelvin">Kelvin</option>
+    </select>
+    <button onclick="convertTemperature()">Convert</button>
+    <p id="result"></p>
+
+    <script>
+        function convertTemperature() {
+            var temperature = parseFloat(document.getElementById("temperature").value);
+            var unit = document.getElementById("unit").value;
+            var result = document.getElementById("result");
+
+            if (isNaN(temperature)) {
+                result.innerText = "Please enter a valid temperature.";
+                return;
+            }
+
+            switch (unit) {
+                case "celsius":
+                    result.innerText = `${temperature} °C is ${celsiusToFahrenheit(temperature).toFixed(2)} °F and ${celsiusToKelvin(temperature).toFixed(2)} K.`;
+                    break;
+                case "fahrenheit":
+                    result.innerText = `${temperature} °F is ${fahrenheitToCelsius(temperature).toFixed(2)} °C and ${fahrenheitToKelvin(temperature).toFixed(2)} K.`;
+                    break;
+                case "kelvin":
+                    result.innerText = `${temperature} K is ${kelvinToCelsius(temperature).toFixed(2)} °C and ${kelvinToFahrenheit(temperature).toFixed(2)} °F.`;
+                    break;
+                default:
+                    result.innerText = "Invalid unit.";
+                    break;
+            }
+        }
+
+        function celsiusToFahrenheit(celsius) {
+            return (celsius * 9 / 5) + 32;
+        }
+
+        function celsiusToKelvin(celsius) {
+            return celsius + 273.15;
+        }
+
+        function fahrenheitToCelsius(fahrenheit) {
+            return (fahrenheit - 32) * 5 / 9;
+        }
+
+        function fahrenheitToKelvin(fahrenheit) {
+            return (fahrenheit + 459.67) * 5 / 9;
+        }
+
+        function kelvinToCelsius(kelvin) {
+            return kelvin - 273.15;
+        }
+
+        function kelvinToFahrenheit(kelvin) {
+            return (kelvin * 9 / 5) - 459.67;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+/* styles.css */
+
+/* a. Background color and image with gradient overlay */
+body {
+    background-color: #f0f0f0; /* Light gray background color */
+    background-image: url('background-image.jpg'); /* Replace 'background-image.jpg' with your image path */
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.3); /* Gradient overlay color */
+}
+
+/* b. h1 heading styles */
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff; /* White color for h1 heading */
+}
+
+/* c. Paragraph styles */
+p {
+    font-size: 15px;
+    color: #ffffff; /* White color for paragraphs */
+    line-height: 1.5; /* Increase line spacing */
+}
+
+/* d. Highlight important words */
+em {
+    font-style: italic;
+    font-weight: bold;
+    color: #ff0000; /* Red color for highlighted words */
+}
+
+/* e. h2 heading styles */
+h2 {
+    font-size: 20px;
+    color: #ffffff; /* White color for h2 heading */
+}
+
+/* Add more styles as needed */

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+</head>
+<body>
+    <h1>Timer</h1>
+
+    <!-- Start button -->
+    <button id="startBtn">Start</button>
+
+    <!-- Stop button -->
+    <button id="stopBtn">Stop</button>
+
+    <!-- Timer display -->
+    <p id="timer">0 seconds</p>
+
+    <script>
+        // Initialize timer variables
+        var timerInterval;
+        var seconds = 0;
+
+        // Function to start the timer
+        function startTimer() {
+            // Clear any existing interval to prevent multiple timers running simultaneously
+            clearInterval(timerInterval);
+
+            // Start the timer interval
+            timerInterval = setInterval(function() {
+                seconds++;
+                document.getElementById("timer").innerText = seconds + " seconds";
+            }, 1000); // Update timer every second
+        }
+
+        // Function to stop the timer
+        function stopTimer() {
+            // Clear the timer interval
+            clearInterval(timerInterval);
+        }
+
+        // Event listener for the start button
+        document.getElementById("startBtn").addEventListener("click", startTimer);
+
+        // Event listener for the stop button
+        document.getElementById("stopBtn").addEventListener("click", stopTimer);
+    </script>
+</body>
+</html>

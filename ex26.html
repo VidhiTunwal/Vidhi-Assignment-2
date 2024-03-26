@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .error {
+            color: red;
+            font-size: 0.8em;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>User Registration Form</h2>
+        <form id="registrationForm" action="#" method="post" onsubmit="return validateForm()">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName">
+            <span id="firstNameError" class="error"></span>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName">
+            <span id="lastNameError" class="error"></span>
+
+            <label for="banasthaliId">Banasthali ID:</label>
+            <input type="text" id="banasthaliId" name="banasthaliId">
+            <span id="banasthaliIdError" class="error"></span>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <span id="passwordError" class="error"></span>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword">
+            <span id="confirmPasswordError" class="error"></span>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <span id="emailError" class="error"></span>
+
+            <label for="contactNumber">Contact Number:</label>
+            <input type="tel" id="contactNumber" name="contactNumber">
+            <span id="contactNumberError" class="error"></span>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            var firstName = document.getElementById('firstName').value.trim();
+            var lastName = document.getElementById('lastName').value.trim();
+            var banasthaliId = document.getElementById('banasthaliId').value.trim();
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
+            var address = document.getElementById('address').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var contactNumber = document.getElementById('contactNumber').value.trim();
+
+            var firstNameError = document.getElementById('firstNameError');
+            var lastNameError = document.getElementById('lastNameError');
+            var banasthaliIdError = document.getElementById('banasthaliIdError');
+            var passwordError = document.getElementById('passwordError');
+            var confirmPasswordError = document.getElementById('confirmPasswordError');
+            var emailError = document.getElementById('emailError');
+            var contactNumberError = document.getElementById('contactNumberError');
+
+            // Clear previous error messages
+            firstNameError.textContent = "";
+            lastNameError.textContent = "";
+            banasthaliIdError.textContent = "";
+            passwordError.textContent = "";
+            confirmPasswordError.textContent = "";
+            emailError.textContent = "";
+            contactNumberError.textContent = "";
+
+            var isValid = true;
+
+            if (firstName === "") {
+                firstNameError.textContent = "First name is required";
+                isValid = false;
+            }
+
+            if (lastName === "") {
+                // Last name is optional, so no validation needed
+            }
+
+            if (banasthaliId === "") {
+                banasthaliIdError.textContent = "Banasthali ID is required";
+                isValid = false;
+            }
+
+            if (password === "") {
+                passwordError.textContent = "Password is required";
+                isValid = false;
+            }
+
+            if (confirmPassword === "") {
+                confirmPasswordError.textContent = "Confirm password is required";
+                isValid = false;
+            } else if (password !== confirmPassword) {
+                confirmPasswordError.textContent = "Passwords do not match";
+                isValid = false;
+            }
+
+            if (address === "") {
+                // Address is optional, so no validation needed
+            }
+
+            if (email === "") {
+                emailError.textContent = "Email is required";
+                isValid = false;
+            } else if (!isValidEmail(email)) {
+                emailError.textContent = "Invalid email address";
+                isValid = false;
+            }
+
+            if (contactNumber === "") {
+                contactNumberError.textContent = "Contact number is required";
+                isValid = false;
+            } else if (!isValidContactNumber(contactNumber)) {
+                contactNumberError.textContent = "Invalid contact number";
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        function isValidEmail(email) {
+            var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        function isValidContactNumber(contactNumber) {
+            var re = /^\d{10}$/;
+            return re.test(contactNumber);
+        }
+    </script>
+</body>
+</html>
