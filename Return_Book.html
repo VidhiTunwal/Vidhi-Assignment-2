@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Book</title>
+    <style>
+        body {
+            background-image: url(); /* Add your background image path */
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 20px;
+            text-align: center; /* Center-align the text within the container */
+        
+        }
+
+        /* Add your CSS styles for the tabs and page layout here */
+
+        /* Example styles for tabs */
+        .tab-container {
+            display: flex;
+            justify-content: space-between;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        /* Example style for the Log Out link */
+        .logout-link {
+            color: #ff0000;
+    </style>
+</head>
+<body>
+    <table style="width:100%">
+
+<tr>
+    <td colspan="8" align="center"><img src="logo.jpg" width="200" height="100px" alt="logo"/></td>
+</tr>
+
+<tr style="background:#ffcc00;">
+    
+<td align="center" style="padding:10px;"><a href="Home.html">Home</a></td>
+<td align="center" style="padding:10px;"><a href="about.html">About</a></td>
+<td align="center" style="padding:10px;"><a href="NewStudent.html">New Student</a></td>
+<td align="center" style="padding:10px;"><a href="NewBook.html">New Book</a></td>
+<td align="center" style="padding:10px;"><a href="Issue_Book.html">Issue Book</a></td>
+<td align="center" style="padding:10px;"><a href="Return_Book.html">Return Book</a></td>
+<td align="center" style="padding:10px;"><a href="Statistics.jsp">Statistics</a></td>
+<td align="center" style="padding:10px;"><a href="ContactUs.html">Contact Us</a></td>
+<a href="index.html" class="tab logout-link">Log Out</a> <!-- Log Out link -->
+</tr>
+<tr>
+    <td colspan="8"><img src="bg56.jpg" width="100%" alt="b"/>
+    </td>
+</tr>
+<td colspan="8">
+   
+    <form action="Return.jsp" method="post">
+    <div class="container">
+        <h1>Return Book</h1>
+        <p>
+            Welcome to the Return Book page. You can use this page to return a book that you have borrowed from our library.
+        </p>
+        <p>
+            If you have the Book ID and Student ID, please enter them below and click the "Return" button.
+        </p>
+        
+        
+            <label for="BookID">Book ID:</label>
+            <input type="text" id="BookID" name="BookID" required><br><br>
+
+            <label for="Student_ID">Student ID:</label>
+            <input type="text" id="Student_ID" name="Student_ID" required><br><br>
+
+            <button type="submit">Return</button>
+        </form>
+        <a href="Home.html">Close</a>
+
+        </form>
+        <p>
+            Need more time? No worries. If you're not ready to return the book, you can always come back later.
+       
+         </form>
+    
+    </div>
+</body>
+</html>

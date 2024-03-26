@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Issue Book</title>
+    <style>
+    body {
+            background-image: url('1.jpg'); /* Add your background image path */
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 20px;
+            text-align: center; /* Center-align the text within the container */
+        
+        }
+
+        /* Add your CSS styles for the tabs and page layout here */
+
+        /* Example styles for tabs */
+        .tab-container {
+            display: flex;
+            justify-content: space-between;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        /* Example style for the Log Out link */
+        .logout-link {
+            color: #ff0000; /* Red color for the Log Out link */
+        }</style>
+    <!-- Add your CSS styles and background image if needed -->
+</head>
+<body>
+    <table style="width:100%">
+
+
+
+<td colspan="8" style="padding:20px 10px;"><h2>Our Books</h2></td>
+</tr>
+
+<tr>
+<td style="padding:5px 10px;">
+<img src="book1.jpg" style="height:200px;">
+<h4>Help Me Find My Stomach</h4>
+<h4>price:Rs200</h4>
+</td>
+
+<td style="padding:5px 10px;">
+<img src="book2.jpg" style="height:200px;">
+<h4>Let The Good Times Roll Up</h4>
+<h4>price:Rs200</h4>
+</td>
+
+<td style="padding:5px 10px;">
+<img src="book3.jpg" style="height:200px;">
+<h4>Knock on the Door</h4>
+<h4>price:Rs350</h4>
+</td>
+
+<td style="padding:5px 10px;">
+<img src="book4.jpg" style="height:200px;">
+<h4>Vampires in the House</h4>
+<h4>price:Rs250</h4>
+</td>
+
+<td style="padding:5px 10px;">
+<img src="book5.jpg" style="height:200px;">
+<h4>Harry Potter</h4>
+<h4>price:Rs1200</h4>
+</td>
+
+<td style="padding:5px 10px;">
+<img src="book6.jpg" style="height:200px;">
+<h4>Our State Fair Is A Great State Fair</h4>
+<h4>price:Rs200</h4>
+</td>
+
+<td style="padding:5px 10px;">
+<img src="book7.jpg" style="height:200px;">
+<h4>The Alchemist</h4>
+<h4>price:Rs100</h4>
+</td>
+
+<td style="padding:5px 10px;">
+<img src="book8.jpg" style="height:200px;">
+<h4>The Hobbit</h4>
+<h4>price:Rs200</h4>
+</td>
+</tr>
+
+<tr>
+<td style="padding:5px 10px;">
+<img src="book9.jpg" style="height:200px;">
+<h4>Learn Spanish</h4>
+<h4>price:Rs1200</h4>
+</td>
+
+<td style="padding:5px 10px;">
+<img src="book10.jpg" style="height:200px;">
+<h4>Breaking The Habbit Of Being Yourself</h4>
+<h4>price:Rs300</h4>
+</td>
+
+<td style="padding:5px 10px;">
+<img src="book11.jpg" style="height:200px;">
+<h4>The Princess Bride</h4>
+<h4>price:Rs500</h4>
+</td>
+
+<td style="padding:5px 10px;">
+<img src="book12.jpg" style="height:200px;">
+<h4>Writing And Grammar</h4>
+<h4>price:Rs200</h4>
+</td>
+
+<td style="padding:5px 10px;">
+<img src="book13.jpg" style="height:200px;">
+<h4>Matisse On Art</h4>
+<h4>price:Rs130</h4>
+</td>
+
+<td style="padding:5px 10px;">
+<img src="book14.jpg" style="height:200px;">
+<h4>Lori Foster</h4>
+<h4>price:Rs200</h4>
+</td>
+
+<td style="padding:5px 10px;">
+<img src="book15.jpg" style="height:200px;">
+<h4>Shaedes of Grey</h4>
+<h4>price:Rs500</h4>
+</td>
+
+<td style="padding:5px 10px;">
+<img src="book16.jpg" style="height:200px;">
+<h4>Slave To Love</h4>
+<h4>price:Rs2000</h4>
+</td>
+
+
+</tr>
+
+
+<td colspan="8">
+   
+    <form action="Issue.jsp" method="post">
+        <label for="BookID">Book ID:</label>
+        <input type="text" id="BookID" name="BookID" required><br><br>
+
+        <label for="Student_ID">Student_ID:</label>
+        <input type="text" id="Student_ID" name="Student_ID"required><br><br>
+
+        <label for="IssueDate">Issue Date:</label>
+        <input type="date" id="IssueDate" name="IssueDate" required><br><br>
+
+        <label for="DueDate">Due Date:</label>
+        <input type="date" id="DueDate" name="DueDate" required><br><br>
+
+        <label for="ReturnBook">Return Book:</label>
+        <input type="text" id="ReturnBook" name="ReturnBook" required><br><br>
+
+        <input type="submit" value="Save">
+        <input type="button" value="Close" onclick="window.location.href='Home.html';">
+        
+        <!-- Display button to view books -->
+        <input type="button" value="Display" onclick="window.location.href='ViewIssue.jsp';">
+    </form>
+   
+</body>
+</html>
