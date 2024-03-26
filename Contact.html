@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('1.jpg');
+            background-size: cover;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        #submission-message {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #d4edda;
+            color: #155724;
+            border-radius: 4px;
+            border: 1px solid #c3e6cb;
+        }
+
+        .alt-contact {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .alt-contact p {
+            margin: 8px 0;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #336799;
+            color: #fff;
+            padding: 10px 0;
+        }
+        /* Centering the logo */
+        .logo-container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <table style="width:100%">
+        <tr class="logo-container">
+            <td colspan="8" align="center"><img src="logo.jpg" style="height:100px;"></td>
+        </tr>
+        <tr style="background:#ffcc00;">
+            <td align="center" style="padding:10px;"><a href="index.html">Home</a></td>
+            <td align="center" style="padding:10px;"><a href="About.html">About</a></td>
+            <td align="center" style="padding:10px;"><a href="Category.html">Book Categories</a></td>
+            <td align="center" style="padding:10px;"><a href="Services.html">Our Services</a></td>
+            <td align="center" style="padding:10px;"><a href="BestSelling.html">Best Selling</a></td>
+            <td align="center" style="padding:10px;"><a href="New.html">New Releases</a></td>
+            <td align="center" style="padding:10px;"><a href="Author.html">Authors</a></td>
+            <td align="center" style="padding:10px;"><a href="Contact.html">Contact Us</a></td>
+        </tr>
+
+        <tr>
+            <td colspan="8"><img src="c.jpg" width="100%" alt="contact"/></td>
+        </tr>
+
+        <tr>
+            <td colspan="8" style="padding:20px 10px;"><h2>Contact us</h2></td>
+        </tr>
+
+        <tr>
+            <td colspan="8">
+                <div class="container">
+    
+    <form action="index.html" method="post">
+        <label for="Name">Name:</label>
+        <input type="text" id="Name" name="Name" required><br><br>
+
+        <label for="Email">Email:</label>
+        <input type="email" id="Email" name="Email" required><br><br>
+
+        <label for="Mobile">Mobile:</label>
+        <input type="tel" id="Mobile" name="Mobile" required><br><br>
+
+        <label for="Message">Message:</label><br>
+        <textarea id="Message" name="Message" rows="4" cols="50" required></textarea><br><br>
+
+        <a href="index.html"><input type="submit" value="Submit"></a>
+    </form>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="8" style="padding:20px 10px;">
+                <h2>Alternative Contact Methods</h2>
+                <p>Email: vidhi@gmail.com</p>
+                <p>Phone: +1234567890</p>
+                <p>Address: 123 Main Street, ajmer, rajasthan</p>
+            </td>
+        </tr>
+
+        <tr style="background:#336799;">
+            <td colspan="8" align="center">
+                <p style="color:#fff;">Copyright @vidhi</p>
+            </td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
